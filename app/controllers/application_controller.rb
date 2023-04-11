@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  layout(false)
+  layout("wrapper.html.erb")
 
   # Add your actions below this line
   # ================================
@@ -10,7 +10,8 @@ end
 
   def play_rock
     #write a ton of code
-    render({ :template => "game_templates/user_rock.html.erb"})
+    #render({ :template => "game_templates/user_rock.html.erb", :layout => "wrapper.html.erb" })
+    render({ :template => "game_templates/user_rock.html.erb" })
   end
 
   def play_paper
